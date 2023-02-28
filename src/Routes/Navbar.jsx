@@ -2,14 +2,23 @@ import { Link, NavLink} from 'react-router-dom';
 import logo from './img/logo.png'
 import discord from './img/discord.png'
 import youtube from './img/youtube.png'
-import { HamMenu } from './HamMenu';
-import { useState } from 'react';
+import { useState,useEffect, useRef } from 'react';
 
 export const Navbar = () => {
-    const [displayDropdown, setDisplayDropdown] = useState(true);
+    const [displayDropdown, setDisplayDropdown] = useState(false);
+    let menuRef = useRef();
     const closeDropdown = () => {
         setDisplayDropdown(false);
     }
+    useEffect(()=>{
+        let handler = (e) =>{
+            if (!menuRef.current.contains(e.target)) {
+                setDisplayDropdown(false);
+                console.log(menuRef.current)
+            }
+        }
+        document.addEventListener("mousedown",handler)
+    })
 
     return (
         <nav className='navbar navbar-expand-md'>
@@ -19,8 +28,21 @@ export const Navbar = () => {
                 to={'/'}>
                 <img src={logo} alt="Poke Asistente" />
                 </Link>
-                {displayDropdown && <HamMenu/>}
-                <div className="collapse navbar-collapse general_color" id="menu">
+                <button 
+                    className={`${!displayDropdown ? 'navbar-toggler general_color collapsed' : 'navbar-toggler general_color'}`}
+                    ref={menuRef} type="button"
+                    data-bs-toggle="collapse"
+                    data-bs-target="#menu"
+                    aria-controls="navbarSupportedContent"
+                    aria-expanded={displayDropdown}
+                    aria-label="Toggle navigation"
+                    onClick={() => {!setDisplayDropdown(!displayDropdown)}}>
+                    <span className="navbar-toggler-icon general_color"></span>
+                </button>
+
+                <div 
+                    className={`${!displayDropdown ? 'navbar-collapse general_color collapse' : 'navbar-collapse general_color collapse animate__animated animate__backInDown'}`} 
+                    id="menu">
                 <ul className="navbar-nav">
                 <NavLink
                         className={({isActive})=>`nav-item nav-link ${isActive ? 'active':''}`}
