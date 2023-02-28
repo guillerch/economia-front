@@ -18,9 +18,9 @@ export const AppRoutes = () => {
                 <Route path = 'crianza' element={<Crianza/>}/>
                 <Route path = 'politicas' element={<Politica/>}/>
                 <Route path = 'terminos' element={<Terminos/>}/>
-                <Route path = '' element={<PokeAsistente/>}/>
+                <Route path = '/' element={<PokeAsistente/>}/>
                 {/* en caso de no existir la ruta */}
-                <Route path = '/*' element={<Navigate to =''/>}/>
+                <Route path = '/*' element={<Navigate to ='/'/>}/>
             </Routes>
         </div>
         <Cookies/>
