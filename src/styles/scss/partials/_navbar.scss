@@ -1,0 +1,15 @@
+@use 'mixinsfunc';
+
+
+.navbar{
+    background-color: rgba(238,230,230,.5);
+}
+.youtube{
+    width: mixinsfunc.pixels-rem(32);
+}
+.discord{
+    width: mixinsfunc.pixels-rem(32);
+}
+.nav-item{
+    margin-right: mixinsfunc.pixels-rem(4);
+}

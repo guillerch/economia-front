@@ -1,0 +1,14 @@
+@use 'mixinsfunc';
+
+.footer {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    padding: mixinsfunc.pixels-rem(20);
+    background-color: rgba(238,230,230,.5);
+    @media screen and (max-width:768px) {
+        position: static;
+    }
+
+}
