@@ -4,9 +4,7 @@ const horas = [16,20,42,44,67];
 export const Bayas = () => {
     
     return (
-
         <>
-        
         <div className='container mt-2 text-center animate__animated animate__fadeIn'>
             <h3 className='general_color'>
                 <b>Bayas</b>
@@ -32,7 +30,6 @@ export const Bayas = () => {
                 ))}
             </div>
         </div>
-        
         </>
     )
 }

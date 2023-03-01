@@ -12,8 +12,6 @@ export const CuerpoBayas = ({baya}) => {
                     {(baya.seed3 !== 'NN') && (<li className="list-group-item">{baya.seed3}</li>)}
                 </td>
             </tr>
-
         </>
     )
-    
 }

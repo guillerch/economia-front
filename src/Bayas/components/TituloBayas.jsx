@@ -1,7 +1,6 @@
 
 export const TituloBayas = ({hora=''}) => {
     return (
-        
         <button 
             className="btn btn-outline-info col ms-2 mb-2" 
             type="button" 

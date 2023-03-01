@@ -1,7 +1,5 @@
-
 import { BayaList } from "../helpers/BayaList"
 import { CuerpoBayas } from "./CuerpoBayas"
-
 
 export const CollapseBaya = ({hora}) => {
     const {bayas}=BayaList();

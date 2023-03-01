@@ -6,7 +6,6 @@ export const Footer = () => {
             <div className="col">
                 <button className="btn text-decoration-none">
                 <a href="https://www.linkedin.com/in/guillerch/" className="nav-link" target='_blank'>© {year} guillerch</a>
-
                 </button>
             </div>
         </div>
