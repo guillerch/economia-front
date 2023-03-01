@@ -1,7 +1,7 @@
 import { Link, NavLink} from 'react-router-dom';
-import logo from './img/logo.png'
-import discord from './img/discord.png'
-import youtube from './img/youtube.png'
+import logo from './img/logo.webp'
+import discord from './img/discord.webp'
+import youtube from './img/youtube.webp'
 import { useState,useEffect, useRef } from 'react';
 
 export const Navbar = () => {
@@ -24,7 +24,7 @@ export const Navbar = () => {
             ref={menuRef}>
                 <Link className="navbar-brand"
                 to={'/'}>
-                <img src={logo} alt="Poke Asistente" />
+                <img className='brand-main' src={logo} alt="Poke Asistente" />
                 </Link>
                 <button 
                     className={`${!displayDropdown ? 'navbar-toggler general_color collapsed' : 'navbar-toggler general_color'}`}

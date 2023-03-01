@@ -1,5 +1,5 @@
 body {
-  background: url("./img/bg_02.png") repeat-x left -180px #73ace2;
+  background: url("./img/bg_02.webp") repeat-x left -180px #73ace2;
 }
 
 .container {
@@ -59,12 +59,19 @@ body {
   background-color: rgba(238, 230, 230, 0.5);
 }
 
+.brand-main {
+  width: 16rem;
+  height: 3.75rem;
+}
+
 .youtube {
   width: 2rem;
+  height: 2rem;
 }
 
 .discord {
   width: 2rem;
+  height: 2rem;
 }
 
 .nav-item {

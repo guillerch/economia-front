@@ -4,11 +4,17 @@
 .navbar{
     background-color: rgba(238,230,230,.5);
 }
+.brand-main{
+    width: mixinsfunc.pixels-rem(256);
+    height: mixinsfunc.pixels-rem(60);
+}
 .youtube{
     width: mixinsfunc.pixels-rem(32);
+    height: mixinsfunc.pixels-rem(32);
 }
 .discord{
     width: mixinsfunc.pixels-rem(32);
+    height: mixinsfunc.pixels-rem(32);
 }
 .nav-item{
     margin-right: mixinsfunc.pixels-rem(4);
