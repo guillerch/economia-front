@@ -22,15 +22,16 @@ export const Navbar = () => {
 
     return (
         <nav className='navbar navbar-expand-md'>
-            <div className="container-fluid">
-
+            <div 
+            className="container-fluid"
+            ref={menuRef}>
                 <Link className="navbar-brand"
                 to={'/'}>
                 <img src={logo} alt="Poke Asistente" />
                 </Link>
                 <button 
                     className={`${!displayDropdown ? 'navbar-toggler general_color collapsed' : 'navbar-toggler general_color'}`}
-                    ref={menuRef} type="button"
+                    type="button"
                     data-bs-toggle="collapse"
                     data-bs-target="#menu"
                     aria-controls="navbarSupportedContent"
