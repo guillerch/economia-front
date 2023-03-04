@@ -92,14 +92,14 @@ body {
   }
 }
 
-.card {
+.card-categorie {
   height: 19.6875rem;
 }
-.card-body {
+.card-categorie-body {
   display: flex;
   justify-content: center;
 }
-.card-btn {
+.card-categorie-btn {
   position: absolute;
   bottom: 2%;
 }

@@ -1,5 +1,5 @@
 @use 'mixinsfunc';
-.card{
+.card-categorie{
     height: mixinsfunc.pixels-rem(315);
     &-body{
         display: flex;
