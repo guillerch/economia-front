@@ -92,4 +92,20 @@ body {
   }
 }
 
+.card {
+  height: 19.6875rem;
+}
+.card-body {
+  display: flex;
+  justify-content: center;
+}
+.card-btn {
+  position: absolute;
+  bottom: 2%;
+}
+
+.card-img-top {
+  max-height: 9.375rem;
+}
+
 /*# sourceMappingURL=styles.css.map */

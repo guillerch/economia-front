@@ -1,12 +1,13 @@
-import { BayaList } from "../helpers/BayaList"
+import { useFetch } from "../../hooks"
 import { CuerpoBayas } from "./CuerpoBayas"
 
 export const CollapseBaya = ({hora}) => {
-    const {bayas}=BayaList();
-    const bayasFiltradas = (bayas) =>{
-        return bayas.filter(bayas => bayas.time === hora)
+    const url = 'https://msgmanager.tk/api/bayapokemmo123456/';
+    const {data}=useFetch(url);
+    const dataFiltradas = (data) =>{
+        return data.filter(data => data.time === hora)
     }
-    const data = bayasFiltradas(bayas);
+    const bayas = dataFiltradas(data);
     return (
         <div className="collapse" id={`time-${hora}`}>
             <div className="card card-body">
@@ -20,7 +21,7 @@ export const CollapseBaya = ({hora}) => {
                         </tr>
                     </thead>
                     <tbody>
-                        {data.map(berry =>(
+                        {bayas.map(berry =>(
                             <CuerpoBayas key={berry.id} baya={berry}/>
                         ))}
                     </tbody>

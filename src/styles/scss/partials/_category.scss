@@ -1,0 +1,15 @@
+@use 'mixinsfunc';
+.card{
+    height: mixinsfunc.pixels-rem(315);
+    &-body{
+        display: flex;
+        justify-content: center;
+    }
+    &-btn{
+        position: absolute;
+        bottom: 2%;
+    }
+}
+.card-img-top{
+    max-height: mixinsfunc.pixels-rem(150);
+}
