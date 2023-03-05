@@ -20,14 +20,13 @@ export const AppRoutes = () => {
             <Route path = 'bayas' element={<Bayas/>}/>
             <Route path = 'crianza' element={<Crianza/>}/>
             {/* Rutas del blog */}
-            <Route path='/*' element={<CategoriesRoute/>}/>
+            <Route path='blog/*' element={<CategoriesRoute/>}/>
             <Route path='post/*' element={<PostsRoutes/>}/>
             {/* Rutas de politicas y terminos */}
             <Route path = 'politicas' element={<Politica/>}/>
             <Route path = 'terminos' element={<Terminos/>}/>
-            
-            {/* en caso de no existir la ruta */}
-            <Route path="/*" element={<Navigate to="/crianza" />} />
+
+            <Route path="/*" element={<Navigate to='/' />} />
             </Routes>
 
         </div>

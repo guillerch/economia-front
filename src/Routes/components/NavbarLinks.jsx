@@ -35,7 +35,7 @@ export const NavbarLinks = () => {
             <ul className="dropdown-menu">
                 {data.map(categorie => 
                     <li key={categorie.slug}>
-                        <Link className="dropdown-item nav-item" to={`${categorie.slug}`}>
+                        <Link className="dropdown-item nav-item" to={`blog/${categorie.slug}`}>
                             {categorie.name}
                         </Link>
                     </li>
