@@ -1,4 +1,4 @@
-import { HashRouter ,Route, Routes,Navigate } from 'react-router-dom';
+import { Route, Routes,Navigate } from 'react-router-dom';
 import { Bayas } from "../Bayas/Bayas";
 import { CategoriesRoute } from "../Blog/Categories/routes/CategoriesRoute";
 import { PostsRoutes } from "../Blog/Posts/routes/PostsRoutes";
@@ -26,7 +26,7 @@ export const AppRoutes = () => {
             <Route path = 'politicas' element={<Politica/>}/>
             <Route path = 'terminos' element={<Terminos/>}/>
 
-            <Route path="/*" element={<Navigate to='/' />} />
+            <Route path="*" element={<Navigate to='/' replace />} />
             </Routes>
 
         </div>
