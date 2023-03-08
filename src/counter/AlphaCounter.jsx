@@ -1,7 +1,10 @@
 import { useState, useEffect } from "react";
 
 export const AlphaCounter = () => {
-    const [fechaInicio, setFechaInicio] = useState(new Date("2023-03-08T20:28:00"));
+    const [ultimoEvento, setUltimoEvento] = useState(new Date("2023-03-08T20:28:00"));
+
+    const fechaInicio = new Date(ultimoEvento.getTime() + 6 * 60 * 60 * 1000);
+
     const [segundosRestantes, setSegundosRestantes] = useState(
         Math.floor((fechaInicio - new Date()) / 1000)
     );
@@ -16,7 +19,7 @@ export const AlphaCounter = () => {
 
     useEffect(() => {
         if (segundosRestantes <= 0) {
-        setFechaInicio(new Date());
+        setUltimoEvento(new Date());
         setSegundosRestantes(6 * 60 * 60);
         }
     }, [segundosRestantes]);
@@ -25,18 +28,16 @@ export const AlphaCounter = () => {
     const minutos = Math.floor((segundosRestantes % 3600) / 60);
     const segundos = segundosRestantes % 60;
 
-
     return (
         <div>
         {horas <=1 || horas>=10
-        ? <p className="alert alert-danger text-center"><b>Podria estar un pokemon Alpha rondando ahora mismo!!</b></p>
-        :<p className="alert alert-primary text-center">{`Tiempo aproximado hasta el proximo Alpha ${horas
-            .toString()
-            .padStart(2, "0")}:${minutos.toString().padStart(2, "0")}:${segundos
-            .toString()
-            .padStart(2, "0")}`}</p>
+            ? <p className="alert alert-danger text-center"><b>Podria estar un pokemon Alpha rondando ahora mismo!!</b></p>
+            :<p className="alert alert-primary text-center">{`Tiempo aproximado hasta el proximo Alpha ${horas
+                .toString()
+                .padStart(2, "0")}:${minutos.toString().padStart(2, "0")}:${segundos
+                .toString()
+                .padStart(2, "0")}`}</p>
         }
-        
         </div>
     );
-}
+};
