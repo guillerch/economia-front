@@ -30,7 +30,7 @@ export const AlphaCounter = () => {
 
     return (
         <div>
-        {horas <=1 || horas>=10
+        {horas <=1 || horas>=5
             ? <p className="alert alert-danger text-center"><b>Podria estar un pokemon Alpha rondando ahora mismo!!</b></p>
             :<p className="alert alert-primary text-center">{`Tiempo aproximado hasta el proximo Alpha ${horas
                 .toString()
