@@ -1,7 +1,7 @@
 import { useState, useEffect } from "react";
 
 export const AlphaCounter = () => {
-    const [ultimoEvento, setUltimoEvento] = useState(new Date("2023-03-08T20:28:00"));
+    const [ultimoEvento, setUltimoEvento] = useState(new Date("2023-03-08T16:28:00"));
 
     const fechaInicio = new Date(ultimoEvento.getTime() + 6 * 60 * 60 * 1000);
 
