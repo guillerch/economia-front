@@ -1,3 +1,4 @@
+import { AlphaCounter } from "./counter/AlphaCounter"
 import { Footer } from "./Footer"
 
 
@@ -11,6 +12,7 @@ export const PokeAsistente = () => {
                 <p>Además, en nuestro sitio encontrarás una comunidad activa de jugadores apasionados que comparten consejos y estrategias para ayudarte a mejorar tu experiencia de juego. También ofrecemos herramientas útiles y recursos para que puedas sacar el máximo provecho de tu experiencia en PokeMMO.</p>
                 <p>¡Explora nuestro sitio y únete a nuestra comunidad de jugadores mientras te adentras en el mundo emocionante y lleno de aventuras de PokeMMO!</p>
             </div>
+            <AlphaCounter/>
             <Footer/>
         </>
     )
