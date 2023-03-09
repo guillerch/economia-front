@@ -53,7 +53,7 @@ export const AlphaCounter = () => {
 
     return (
         <div>
-        {(horas == 0 && minutos < 30) || (horas >= 4 && minutos >= 30) ? (
+        {(horas == 0 && minutos < 2) || (horas >= 4 && minutos >= 30) ? (
             <p className="alert alert-danger text-center">
             <b>Podria estar un pokemon Alpha rondando ahora mismo!!</b>
             </p>
