@@ -3,7 +3,7 @@ import { useState, useEffect } from "react";
 export const AlphaCounter = () => {
     const [ultimoEvento, setUltimoEvento] = useState(new Date("2023-03-08T16:28:00"));
 
-    const fechaInicio = new Date(ultimoEvento.getTime() + 6 * 60 * 60 * 1000);
+    const fechaInicio = new Date(ultimoEvento.getTime() + 5 * 60 * 60 * 1000);
 
     const [segundosRestantes, setSegundosRestantes] = useState(
         Math.floor((fechaInicio - new Date()) / 1000)
@@ -20,7 +20,7 @@ export const AlphaCounter = () => {
     useEffect(() => {
         if (segundosRestantes <= 0) {
         setUltimoEvento(new Date());
-        setSegundosRestantes(6 * 60 * 60);
+        setSegundosRestantes(5 * 60 * 60);
         }
     }, [segundosRestantes]);
 
@@ -30,7 +30,7 @@ export const AlphaCounter = () => {
 
     return (
         <div>
-        {horas <=1 || horas>=5
+        {horas <=1 || horas>=4
             ? <p className="alert alert-danger text-center"><b>Podria estar un pokemon Alpha rondando ahora mismo!!</b></p>
             :<p className="alert alert-primary text-center">{`Tiempo aproximado hasta el proximo Alpha ${horas
                 .toString()
