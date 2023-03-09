@@ -6,7 +6,8 @@ export const AlphaCounter = () => {
 
     const horaActual = moment().tz(zonaHoraria).format("HH:mm:ss");
     const horaReal = parseInt(horaActual.split(":")[0]);
-
+    const minutoReal = parseInt(horaActual.split(":")[1]);
+    
     const [segundosRestantes, setSegundosRestantes] = useState(0);
 
     useEffect(() => {
@@ -39,10 +40,10 @@ export const AlphaCounter = () => {
     return (
         <div>
         {
-            (horaReal >= 6 && horaReal <= 7) ||
-            (horaReal >= 12 && horaReal <= 13) ||
-            (horaReal >= 16 && horaReal <= 17) ||
-            (horaReal >= 21 && horaReal <= 22)
+            ((horaReal === 6 || horaReal === 7) && (minutoReal<=59)) ||
+            ((horaReal === 12 || horaReal === 13) && (minutoReal<=59)) ||
+            ((horaReal === 16 && horaReal === 17) && (minutoReal<=59)) ||
+            ((horaReal === 21 && horaReal === 22) && (minutoReal<=59))
         ? (
             <p className="alert alert-danger text-center">
                 <b>Podria estar un pokemon Alpha rondando ahora mismo!!</b>
