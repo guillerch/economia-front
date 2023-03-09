@@ -43,10 +43,10 @@ export const AlphaCounter = () => {
     const minutoReal = moment.tz(zonaHoraria).minute();
     return (
         <div>
-        {((horaActual === 6 || horaActual === 7) && minutoReal <= 59) ||
-        ((horaActual === 12 || horaActual === 13) && minutoReal <= 59) ||
-        ((horaActual === 16 || horaActual === 17) && minutoReal <= 59) ||
-        ((horaActual === 21 || horaActual === 22) && minutoReal <= 59)
+        {(horaActual === 6 && minutoReal <= 59) ||
+        (horaActual === 12 && minutoReal <= 59) ||
+        (horaActual === 16 && minutoReal <= 59) ||
+        (horaActual === 21 && minutoReal <= 59)
         ? (
             <p className="alert alert-danger text-center">
             <b>Podria estar un pokemon Alpha rondando ahora mismo!!</b>
@@ -64,3 +64,5 @@ export const AlphaCounter = () => {
             </div>
         );
     };
+
+    // ((horaActual === 6 && minutoReal <= 59) || (horaActual === 7))
