@@ -42,8 +42,8 @@ export const AlphaCounter = () => {
         {
             ((horaReal === 6 || horaReal === 7) && (minutoReal<=59)) ||
             ((horaReal === 12 || horaReal === 13) && (minutoReal<=59)) ||
-            ((horaReal === 16 && horaReal === 17) && (minutoReal<=59)) ||
-            ((horaReal === 21 && horaReal === 22) && (minutoReal<=59))
+            ((horaReal === 16 || horaReal === 17) && (minutoReal<=59)) ||
+            ((horaReal === 21 || horaReal === 22) && (minutoReal<=59))
         ? (
             <p className="alert alert-danger text-center">
                 <b>Podria estar un pokemon Alpha rondando ahora mismo!!</b>
