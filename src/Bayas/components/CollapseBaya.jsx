@@ -1,13 +1,12 @@
-import { useFetch } from "../../hooks"
+import { bayasData } from "../../data"
 import { CuerpoBayas } from "./CuerpoBayas"
 
+
 export const CollapseBaya = ({hora}) => {
-    const url = 'https://msgmanager.tk/api/bayapokemmo123456/';
-    const {data}=useFetch(url);
     const dataFiltradas = (data) =>{
         return data.filter(data => data.time === hora)
     }
-    const bayas = dataFiltradas(data);
+    const bayas = dataFiltradas(bayasData);
     return (
         <div className="collapse" id={`time-${hora}`}>
             <div className="card card-body">
