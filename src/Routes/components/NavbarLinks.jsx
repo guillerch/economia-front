@@ -1,10 +1,7 @@
-import { NavLink,Link} from 'react-router-dom';
-import { useFetch } from '../../hooks';
+import {Link} from 'react-router-dom';
 
 
 export const NavbarLinks = () => {
-    const url = 'https://msgmanager.tk/api/categories/'
-    const {data} = useFetch(url)
     return (
 
     <ul className="navbar-nav">
