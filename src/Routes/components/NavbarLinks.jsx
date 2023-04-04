@@ -28,7 +28,7 @@ export const NavbarLinks = () => {
             to="/politicas">
             Politicas
         </Link>
-        <li className="nav-item dropdown">
+        {/* <li className="nav-item dropdown">
             <Link className="nav-link dropdown-toggle nav-item" to='/blog' role="button" data-bs-toggle="dropdown" aria-expanded="false">
                 Blog
             </Link>
@@ -41,7 +41,7 @@ export const NavbarLinks = () => {
                     </li>
                 )}
             </ul>
-            </li>
+            </li> */}
         </ul>
     )
 }
